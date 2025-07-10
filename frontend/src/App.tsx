@@ -31,30 +31,30 @@ function App() {
   };
 
   return (
-    <main className="flex w-screen h-screen">
+    <main className="flex flex-col md:flex-row w-screen h-screen">
       {showForm && (
-        <div className="w-1/2 h-screen flex items-center justify-center">
+        <div className="w-full md:w-1/2 h-1/2 md:h-full flex items-center justify-center">
           <NewTasks onTaskAdded={onTaskAdded} />
         </div>
       )}
 
       {showDelete && (
-        <div className="w-1/2 h-screen flex items-center justify-center">
+        <div className="w-full md:w-1/2 h-1/2 md:h-full flex items-center justify-center">
           <DeleteTask tasks={tasks} onTasksDeleted={onTasksDeleted} />
         </div>
       )}
 
       {!showForm && !showDelete && (
-        <div id="name" className="w-1/2 h-screen flex items-center justify-center">
-          <h1 className="text-9xl font-bold underline text-[#E3B6CB]">
+        <div id="name" className="w-full md:w-1/2 h-1/2 md:h-full flex items-center justify-center">
+          <h1 className="text-5xl md:text-9xl font-bold underline text-[#E3B6CB] text-center">
             TODO <br /> APP
           </h1>
         </div>
       )}
 
-      <div className="w-1/2 h-screen flex flex-col items-center justify-center bg-[#E3B6CB]">
+      <div className="w-full md:w-1/2 h-1/2 md:h-full flex flex-col items-center justify-center bg-[#E3B6CB]">
         <TasksTable tasks={tasks} />
-        <div className="mt-4 flex space-x-8">
+        <div className="mt-4 flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0">
           <button
             className="bg-[#14453D] text-[#E3B6CB] py-4 px-6 rounded-lg hover:bg-black disabled:opacity-50 disabled:cursor-not-allowed"
             onClick={() => {
