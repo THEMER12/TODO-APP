@@ -32,7 +32,7 @@ Go to the backend folder:
 cd backend/
 ```
 
-Install the dependencies:
+Install the dependencies Poetry (version 1.8.3):
 
 ```bash
 poetry install
