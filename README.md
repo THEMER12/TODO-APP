@@ -7,7 +7,8 @@
 From the terminal, run the script:
 
 ```bash
-./createDB.sh
+cd TODO-APP/
+sh createDB.sh
 ```
 
 You will be asked for your MySQL root user password.  
